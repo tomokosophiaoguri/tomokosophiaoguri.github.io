@@ -1,70 +1,18 @@
+<?php
+$title = 'map';
+?>
 <!doctype html>
-<html lang = "en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Lora:300,400|Open+Sans:300,400&display=swap" rel="stylesheet">
-		<title> Map </title>
-		<style>
-			.topnav{
-				overflow: hidden;
-				background-color: white;
-			}
-			.topnav a {
-				float: right;
-				color: #B9A394;
-				padding: 1% 3%;
-				text-decoration: none;
-				font-family: 'Open Sans', sans-serif;
-				font-style: normal;
-				font-weight: lighter;
-				font-size: 24px;
-			}
-			.topnav a:hover {
-			  background-color: #B9A394;
-			  color: white;
-			}
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/sites.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-			@media screen and (max-width: 430px) {
-				.topnav a {
-					font-size: 16px;
-				}
-			}
+<body>
+    <header><?php include("includes/header.php"); ?></header>
 
-			body{
-				margin-left: 10%;
-				margin-right: 10%;
-			}
-			
-			h1{
-				font-family: 'Open Sans', sans-serif;
-				font-style: normal;
-				font-weight: lighter;
-				font-size: 36px;
-				padding-top: 64px;
-				padding-right: 20%;
-				color: #818D92;
-				line-height: 60px;
-			}
-
-			#map{
-				width: 100%;
-				height: 400px;
-			}
-		</style>
-	</head>
-
-	<div class="topnav">
-		<a href="map.html">MAP</a>
-		<a href="projects.html">PROJECTS</a>
-		<a href="about.html">ABOUT</a>
-	</div>
-
-	<a href="index.html"><img src="signature.png" style="width:20%; position: absolute; top:2%; left: 3%;"></a>
-
-	<body>
-		<h1>I wish I could go back... </h1>
-		<div id="map"></div>
+    <h1 class='map_title'>I wish I could go back... </h1>
+    <div id ='map'>
 		<script>
 			function initMap(){
 				var home = {info: 'Home', lat: 34.1376576, lng: -118.125269};
@@ -168,6 +116,8 @@
 				}
 			}
 		</script>
-		<script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBcwLzeWO7-p-B230zWvwipDMBxGuiVoA4&callback=initMap'></script>
-	</body>
+        <script async defer src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBcwLzeWO7-p-B230zWvwipDMBxGuiVoA4&callback=initMap'></script>
+        </div>
+</body>
+
 </html>
