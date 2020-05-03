@@ -223,4 +223,9 @@ a:hover{
     .project_gallery{
         display: block;
     }
+    .project_imggallery{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 20px;
+    }
 }
